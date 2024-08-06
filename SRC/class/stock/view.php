@@ -216,7 +216,7 @@ function subStockEditView($param)
 
 	<h1>仕入<?php print $param["purpose"] ?></h1>
 
-	<form name="form" id="form" action="index.php" method="get">
+	<form name="form" id="form" action="index.php" method="post">
 		<input type="hidden" name="act" />
 		<input type="hidden" name="sDel" value="<?php print $param["sDel"] ?>" />
 		<input type="hidden" name="sInsDTFrom" value="<?php print $param["sInsDTFrom"] ?>" />
@@ -339,8 +339,8 @@ function subStockEditView($param)
 
 		</table>
 
-		<a href="javascript:fnStockEditCheck();"><img src="./images/<?php print $param["btnImage"] ?>" /></a>　
-		<a href="javascript:form.act.value='stockEditComplete';form.submit();"><img src="./images/btn_return.png" /></a>
+		<a href="javascript:fnStockEditCheck();"><img src="./images/<?php print $param["btnImage"] ?>" /></a>
+		<a href="javascript:form.act.value='stockSearch';form.submit();"><img src="./images/btn_return.png" /></a>
 		<?php
 		if ($param["stockNo"]) {
 		?>
