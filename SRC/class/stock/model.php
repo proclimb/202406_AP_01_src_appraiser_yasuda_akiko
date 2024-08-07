@@ -61,7 +61,7 @@ function fnSqlStockList($flg, $param)
         $where .= " AND AREA <= '" . $param["sAreaTo"] . "'";
     }
     if ($param["sStation"]) {
-        $where .= " AND STATION = '" . $param["sStation"] . "'";
+        $where .= " AND STATION LIKE '%" . $param["sStation"] . "%'";
     }
     if ($param["sDistance"]) {
         $where .= " AND (";
@@ -113,7 +113,7 @@ function fnSqlStockList($flg, $param)
 //
 function fnSqlStockEdit($stockNo)
 {
-    $sql  = "SELECT CHARGE,RANK,ARTICLE,ARTICLEFURI,ROOM,IF(AREA > 0,AREA,''),STATION,DISTANCE,AGENT,STORE,COVER,"
+    $sql  = "SELECT CHARGE,`RANK`,ARTICLE,ARTICLEFURI,ROOM,IF(AREA > 0,AREA,''),STATION,DISTANCE,AGENT,STORE,COVER,"
         . "IF(VISITDT > '0000-00-00',DATE_FORMAT(VISITDT,'%Y/%m/%d'),''),IF(DESKPRICE > 0,DESKPRICE,''),"
         . "IF(VENDORPRICE > 0,VENDORPRICE,''),NOTE,HOW,DEL";
     $sql .= " FROM TBLSTOCK";
@@ -129,7 +129,7 @@ function fnSqlStockUpdate($param)
 {
     $sql = "UPDATE TBLSTOCK";
     $sql .= " SET CHARGE = '" . $param["charge"] . "'";
-    $sql .= ",RANK = '" . $param["rank"] . "'";
+    $sql .= ",`RANK` = '" . $param["rank"] . "'";
     $sql .= ",ARTICLE = '" . $param["article"] . "'";
     $sql .= ",ARTICLEFURI = '" . $param["articleFuri"] . "'";
     $sql .= ",ROOM = '" . $param["room"] . "'";
