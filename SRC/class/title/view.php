@@ -37,10 +37,10 @@ function subFTitleView($param)
 
                 ?>
                         <tr>
-                            <td width="35%" align="center"><?php print $classNo; ?></td>
+                            <td width="5%" align="center"><?php print $classNo; ?></td>
                             <td width="45%"><?php print $name; ?></td>
-                            <td width="10%"><a href="javascript:form.act.value='fTitleItemSearch';form.sClassNo.value=<?php print $classNo; ?>;form.sDocNo.value=<?php print $docNo; ?>;form.submit();">詳細</a></td>
-                            <td width="10%"><a href="javascript:form.act.value='fTitleEdit';form.docNo.value=<?php print $docNo; ?>;form.submit();">編集</a></td>
+                            <td width="5%"><a href="javascript:form.act.value='fTitleItemSearch';form.sClassNo.value=<?php print $classNo; ?>;form.sDocNo.value=<?php print $docNo; ?>;form.submit();">詳細</a></td>
+                            <td width="5%"><a href="javascript:form.act.value='fTitleEdit';form.docNo.value=<?php print $docNo; ?>;form.submit();">編集</a></td>
                         </tr>
                 <?php
                     }
@@ -104,7 +104,7 @@ function subFTitleItemView($param)
 
                 ?>
                         <tr>
-                            <td width="35%" align="center"><?php print $seqNo; ?></td>
+                            <td width="10%" align="center"><?php print $seqNo; ?></td>
                             <td width="45%"><?php print $name; ?></td>
                             <td width="10%"><a href="javascript:form.act.value='fTitleItemEdit';form.docNo.value=<?php print $docNo; ?>;form.submit();">編集</a></td>
                         </tr>
